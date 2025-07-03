@@ -25,3 +25,24 @@ end
 
 require "lazy_setup"
 require "polish"
+
+-- ssh系统剪切板支持
+vim.opt.clipboard = "unnamedplus"
+vim.g.clipboard = {
+  name = "OSC 52",
+  copy = {
+    ["+"] = require("vim.ui.clipboard.osc52").copy "+",
+    ["*"] = require("vim.ui.clipboard.osc52").copy "*",
+  },
+  paste = {
+    ["+"] = require("vim.ui.clipboard.osc52").paste "+",
+    ["*"] = require("vim.ui.clipboard.osc52").paste "*",
+  },
+}
+
+-- 设置全局缩进为 4
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.expandtab = true
+vim.o.smarttab = true
+vim.o.softtabstop = 4
