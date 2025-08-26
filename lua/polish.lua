@@ -1,5 +1,4 @@
-if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then return end -- 警告：移除此行以激活此文件
 
--- This will run last in the setup process.
--- This is just pure lua so anything that doesn't
--- fit in the normal config locations above can go here
+-- 此文件将在设置流程的最后运行。
+-- 这里是纯 Lua 环境，因此任何不适合放在常规配置位置的代码都可以放在此处

@@ -1,13 +1,13 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then return {} end -- 警告：移除此行以激活此文件
 
--- You can also add or configure plugins by creating files in this `plugins/` folder
--- PLEASE REMOVE THE EXAMPLES YOU HAVE NO INTEREST IN BEFORE ENABLING THIS FILE
--- Here are some examples:
+-- 你也可以通过在此 `plugins/` 文件夹中创建文件来添加或配置插件
+-- 启用此文件前请删除你不需要的示例
+-- 以下是一些示例：
 
 ---@type LazySpec
 return {
 
-  -- == Examples of Adding Plugins ==
+  -- == 添加插件的示例 ==
 
   "andweeb/presence.nvim",
   {
@@ -16,9 +16,9 @@ return {
     config = function() require("lsp_signature").setup() end,
   },
 
-  -- == Examples of Overriding Plugins ==
+  -- == 覆盖插件的示例 ==
 
-  -- customize dashboard options
+  -- 自定义仪表盘（dashboard）选项
   {
     "folke/snacks.nvim",
     opts = {
@@ -42,15 +42,15 @@ return {
     },
   },
 
-  -- You can disable default plugins as follows:
+  -- 可按如下方式禁用默认插件：
   { "max397574/better-escape.nvim", enabled = false },
 
-  -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
+  -- 也可以在插件的 setup 调用之外，方便地自定义额外的配置
   {
     "L3MON4D3/LuaSnip",
     config = function(plugin, opts)
-      require "astronvim.plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
-      -- add more custom luasnip configuration such as filetype extend or custom snippets
+      require "astronvim.plugins.configs.luasnip"(plugin, opts) -- 引入默认的 AstroNvim 配置，该配置会调用插件的 setup
+      -- 添加更多自定义的 luasnip 配置，例如扩展文件类型或自定义片段
       local luasnip = require "luasnip"
       luasnip.filetype_extend("javascript", { "javascriptreact" })
     end,
@@ -59,28 +59,28 @@ return {
   {
     "windwp/nvim-autopairs",
     config = function(plugin, opts)
-      require "astronvim.plugins.configs.nvim-autopairs"(plugin, opts) -- include the default astronvim config that calls the setup call
-      -- add more custom autopairs configuration such as custom rules
+      require "astronvim.plugins.configs.nvim-autopairs"(plugin, opts) -- 引入默认的 AstroNvim 配置，该配置会调用插件的 setup
+      -- 添加更多自定义的 autopairs 配置，例如自定义规则
       local npairs = require "nvim-autopairs"
       local Rule = require "nvim-autopairs.rule"
       local cond = require "nvim-autopairs.conds"
       npairs.add_rules(
         {
           Rule("$", "$", { "tex", "latex" })
-            -- don't add a pair if the next character is %
+            -- 如果下一个字符是 % 则不要添加配对
             :with_pair(cond.not_after_regex "%%")
-            -- don't add a pair if  the previous character is xxx
+            -- 如果前一个字符是 xxx 则不要添加配对
             :with_pair(
               cond.not_before_regex("xxx", 3)
             )
-            -- don't move right when repeat character
+            -- 重复字符时不要向右移动
             :with_move(cond.none())
-            -- don't delete if the next character is xx
+            -- 如果下一个字符是 xx 则不要删除
             :with_del(cond.not_after_regex "xx")
-            -- disable adding a newline when you press <cr>
+            -- 按下 <cr> 时禁用添加新行
             :with_cr(cond.none()),
         },
-        -- disable for .vim files, but it work for another filetypes
+        -- 在 .vim 文件中禁用，但可在其他文件类型中生效
         Rule("a", "a", "-vim")
       )
     end,

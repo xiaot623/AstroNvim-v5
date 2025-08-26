@@ -1,6 +1,6 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then return {} end -- 警告：移除此行以激活此文件
 
--- Customize Treesitter
+-- 自定义 Treesitter
 
 ---@type LazySpec
 return {
@@ -9,7 +9,7 @@ return {
     ensure_installed = {
       "lua",
       "vim",
-      -- add more arguments for adding more treesitter parsers
+      -- 可在此添加更多解析器（parsers）
     },
   },
 }
