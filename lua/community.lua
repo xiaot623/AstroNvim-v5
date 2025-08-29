@@ -9,9 +9,9 @@ return {
   "AstroNvim/astrocommunity",
   -- 语言支持
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.python" },
-  { import = "astrocommunity.pack.cpp" },
-  { import = "astrocommunity.pack.cmake" },
+  -- { import = "astrocommunity.pack.python" },
+  -- { import = "astrocommunity.pack.cpp" },
+  -- { import = "astrocommunity.pack.cmake" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.proto" },
   { import = "astrocommunity.pack.html-css" },
