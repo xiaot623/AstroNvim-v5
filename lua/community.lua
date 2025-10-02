@@ -1,17 +1,13 @@
--- if true then return {} end -- 警告：移除此行以激活此文件
+-- if true then return {} end
 
--- AstroCommunity：在此导入社区模块
--- 我们在 `lazy_setup.lua` 中导入此文件，位于 `plugins/` 文件夹之前。
--- 这样可以保证在任何用户插件之前处理这些规格（specs）。
+-- 添加 AstroCommunity 开箱即用的模块
+-- ⚠️：会先于 plugins/ 文件夹加载，即可以在 plugins 中对文件进行覆盖
 
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
   -- 语言支持
   { import = "astrocommunity.pack.lua" },
-  -- { import = "astrocommunity.pack.python" },
-  -- { import = "astrocommunity.pack.cpp" },
-  -- { import = "astrocommunity.pack.cmake" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.proto" },
   { import = "astrocommunity.pack.html-css" },

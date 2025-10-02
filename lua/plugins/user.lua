@@ -1,13 +1,11 @@
-if true then return {} end -- 警告：移除此行以激活此文件
+if true then return {} end
 
--- 你也可以通过在此 `plugins/` 文件夹中创建文件来添加或配置插件
--- 启用此文件前请删除你不需要的示例
--- 以下是一些示例：
+-- 示例文件：在 /plugins 目录下有相同效果
 
 ---@type LazySpec
 return {
 
-  -- == 添加插件的示例 ==
+  -- 添加插件的示例
 
   "andweeb/presence.nvim",
   {
@@ -16,9 +14,7 @@ return {
     config = function() require("lsp_signature").setup() end,
   },
 
-  -- == 覆盖插件的示例 ==
-
-  -- 自定义仪表盘（dashboard）选项
+  -- 覆盖插件的示例
   {
     "folke/snacks.nvim",
     opts = {
@@ -42,10 +38,10 @@ return {
     },
   },
 
-  -- 可按如下方式禁用默认插件：
+  -- 禁用默认插件示例：
   { "max397574/better-escape.nvim", enabled = false },
 
-  -- 也可以在插件的 setup 调用之外，方便地自定义额外的配置
+  -- 自定义默认插件配置
   {
     "L3MON4D3/LuaSnip",
     config = function(plugin, opts)
