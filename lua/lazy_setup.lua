@@ -15,6 +15,7 @@ require("lazy").setup({
   { import = "plugins/core" },
   { import = "plugins/community" },
   { import = "plugins/options" },
+  { import = "plugins/copilot" },
 } --[[@as LazySpec]], {
   install = { colorscheme = { "astrotheme", "habamax" } },
   ui = { backdrop = 100 },
