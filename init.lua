@@ -1,4 +1,3 @@
--- 引导安装 Lazy.nvim，并随后调用其他文件以执行配置
 local lazypath = vim.env.LAZY or vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
 if not (vim.env.LAZY or (vim.uv or vim.loop).fs_stat(lazypath)) then

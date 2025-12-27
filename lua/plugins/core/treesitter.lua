@@ -1,4 +1,4 @@
-if true then return {} end -- 警告：移除此行以激活此文件
+if true then return {} end
 
 ---@type LazySpec
 return {

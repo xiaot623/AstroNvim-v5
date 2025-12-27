@@ -5,8 +5,7 @@ return {
   "AstroNvim/astroui",
   ---@type AstroUIOpts
   opts = {
-    -- 更改配色方案
-    colorscheme = "astrodark",
+    colorscheme = "solarized",
     highlights = {
       init = {
         -- Normal = { bg = "#000000" },
@@ -15,9 +14,7 @@ return {
         -- Normal = { bg = "#000000" },
       },
     },
-    -- 配置图标
     icons = {
-      -- Loading
       LSPLoading1 = "⠋",
       LSPLoading2 = "⠙",
       LSPLoading3 = "⠹",

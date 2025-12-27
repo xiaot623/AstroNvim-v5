@@ -1,18 +1,20 @@
 require("lazy").setup({
   {
     "AstroNvim/AstroNvim",
-    version = "^5", -- 版本号
+    version = "^5",
     import = "astronvim.plugins",
     opts = {
-      mapleader = " ", -- leader
-      maplocalleader = ",", -- localleader
-      icons_enabled = true, -- 启用图标
-      pin_plugins = true, -- 固定插件
-      update_notifications = true, -- `:Lazy update` 的通知
+      mapleader = " ",
+      maplocalleader = ",",
+      icons_enabled = true,
+      pin_plugins = true,
+      update_notifications = true,
     },
   },
-  { import = "community" },
-  { import = "plugins" },
+  { import = "plugins/themes" },
+  { import = "plugins/core" },
+  { import = "plugins/community" },
+  { import = "plugins/options" },
 } --[[@as LazySpec]], {
   install = { colorscheme = { "astrotheme", "habamax" } },
   ui = { backdrop = 100 },
