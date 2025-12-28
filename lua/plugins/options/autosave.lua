@@ -10,16 +10,16 @@ return {
       message = function() return "" end,
     },
     trigger_events = {
-      immediate_save = { "BufLeave", "FocusLost" },
+      immediate_save = { "BufLeave" },
+      defer_save = { "InsertLeave" },
     },
     condition = function(buf)
       local fn = vim.fn
       local utils = require "auto-save.utils.data"
-
       if fn.getbufvar(buf, "&modifiable") == 1 and utils.not_in(fn.getbufvar(buf, "&filetype"), {}) then return true end
       return false
     end,
     write_all_buffers = false,
-    debounce_delay = 200,
+    debounce_delay = 60000,
   },
 }
