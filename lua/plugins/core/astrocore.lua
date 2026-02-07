@@ -70,6 +70,13 @@ return {
 
         ["<M-Left>"] = { "<C-o>", desc = "Jump back" },
         ["<M-Right>"] = { "<C-i>", desc = "Jump forward" },
+
+        -- 多终端
+        ["<leader>t1"] = { "<cmd>1ToggleTerm direction=float<cr>", desc = "Terminal 1" },
+        ["<leader>t2"] = { "<cmd>2ToggleTerm direction=float<cr>", desc = "Terminal 2" },
+        ["<leader>t3"] = { "<cmd>3ToggleTerm direction=float<cr>", desc = "Terminal 3" },
+        ["<leader>t4"] = { "<cmd>4ToggleTerm direction=float<cr>", desc = "Terminal 4" },
+        ["<leader>t5"] = { "<cmd>5ToggleTerm direction=float<cr>", desc = "Terminal 5" },
       },
     },
   },
